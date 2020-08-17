@@ -16,7 +16,7 @@ jobs:
       # Instaling Node for server uploads
 
       - name: Setup Node
-      - uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
         
