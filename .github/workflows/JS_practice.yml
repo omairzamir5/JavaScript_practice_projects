@@ -1,0 +1,30 @@
+name: JavaScript Practice Project
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: 	windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    # Instaling Node for server uploads
+
+    - name: Setup Node
+    - uses: actions/setup-node@v2-beta
+      with:
+        node-version: '12'
+        
+     #Setup surge
+    - name: Installing Surge
+      run: npm install --global surge
+      
+      # Deploy code to surge
+    - name: Execute deployment with Surge
+      run: surge ./ js__practice_project.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
+     
