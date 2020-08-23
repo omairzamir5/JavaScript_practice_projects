@@ -27,13 +27,30 @@ function showSuccess(input) {
 
 }
 
+//Funtion to validate Email
+
+function checkValidEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 function checkInput(inputArray){
     inputArray.forEach(element => {
         if (element.value === '') {
             showErrorMsg(element);
         }
         else{
-            showSuccess(element);
+            if (element.id === 'email') {
+                
+                if (!checkValidEmail(element.value)) {
+                    showErrorMsg(element);  
+                }else{
+                    showSuccess(element);
+                }
+            }else{
+                showSuccess(element);
+            }
+            
         }
     });
 };
