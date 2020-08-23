@@ -6,11 +6,11 @@ const confirm_password = document.getElementById('confirm_password');
 
 
 // Function to show error
-function showErrorMsg(input) {
+function showErrorMsg(input,message) {
     const formControl = input.parentElement;
     formControl.classList.add('error');
     const error = formControl.querySelector('small');
-    error.innerText = `${getFieldName(input)} is Required`;
+    error.innerText = message;
     // console.log(formControl.classList);
     
 };
@@ -29,29 +29,39 @@ function showSuccess(input) {
 
 //Funtion to validate Email
 
-function checkValidEmail(email) {
+function checkValidEmail(input) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    
+    if (re.test(input.value.trim())) {
+        showSuccess(input);
+    }
+    else{
+        showErrorMsg(input,'This is not a Valid Email');
+    }
+}
+
+//Function to check Length of given values
+
+function checkLength(input,min,max) {
+    if (input.value.length < min) {
+        showErrorMsg(input,`${getFieldName(input)} must be atleast ${min} characters`);
+    }
+    else if (input.value.length > max) {
+        showErrorMsg(input,`${getFieldName(input)} must be less than ${max} characters`);
+    } else {
+        showSuccess(input);
+    }
 }
 
 function checkInput(inputArray){
     inputArray.forEach(element => {
         if (element.value === '') {
-            showErrorMsg(element);
+            showErrorMsg(element,`${getFieldName(element)} is Required`);
         }
         else{
-            if (element.id === 'email') {
-                
-                if (!checkValidEmail(element.value)) {
-                    showErrorMsg(element);  
-                }else{
-                    showSuccess(element);
-                }
-            }else{
-                showSuccess(element);
-            }
-            
+           showSuccess(element);
         }
+            
     });
 };
 
@@ -59,5 +69,8 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
 
     checkInput([username,email,password,confirm_password]);
+    checkLength(username,3,10);
+    checkLength(password,6,9);
+    checkValidEmail(email);
    
 });
