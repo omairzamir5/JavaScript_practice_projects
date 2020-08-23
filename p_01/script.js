@@ -15,10 +15,6 @@ function showErrorMsg(input,message) {
     
 };
 
-//Function to Get input
-function getFieldName(input){
-    return input.id.toUpperCase().charAt(0)+input.id.slice(1);
-}
 
 // Function to show Success
 function showSuccess(input) {
@@ -26,6 +22,12 @@ function showSuccess(input) {
     formControl.className = 'form-control success';
 
 }
+
+//Function to Get input
+function getFieldName(input){
+    return input.id.toUpperCase().charAt(0)+input.id.slice(1);
+}
+
 
 //Funtion to validate Email
 
@@ -53,6 +55,14 @@ function checkLength(input,min,max) {
     }
 }
 
+// Function to match confirm password
+
+function checkConfirmPassword(password,confirm_password) {
+    if (password.value !== confirm_password.value) {
+        showErrorMsg(confirm_password,'Passwords Dont Match');
+    }
+}
+
 function checkInput(inputArray){
     inputArray.forEach(element => {
         if (element.value === '') {
@@ -72,5 +82,6 @@ form.addEventListener('submit', function(e){
     checkLength(username,3,10);
     checkLength(password,6,9);
     checkValidEmail(email);
+    checkConfirmPassword(password,confirm_password);
    
 });
