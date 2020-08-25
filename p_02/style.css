@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+}
+
+.movie-container select {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin-left: 5px;
+    background-color: rgb(236, 234, 234);
+    color: black;
+}
+
+.legend {
+    background-color: rgb(236, 234, 234);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.legend li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.legend small{
+    margin-left:3px ;
+}
+
+.legend .seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
+}
+
+.container {
+    perspective: 600px;
+    margin-bottom: 30px;
+}
+.screen {
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    margin: 10px 0 30px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px white;
+}
+
+.seat {
+    background-color: rgb(209, 139, 255);
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.seat:nth-of-type(2) {
+    margin-right: 20px;
+}
+.seat:nth-last-of-type(2) {
+    margin-left: 20px;
+}
+
+.seat.available {
+    background-color: rgb(209, 139, 255);
+}
+.seat.selected {
+    background-color: rgb(63, 213, 250);
+}
+.seat.occupied {
+    background-color: rgb(47, 194, 194);
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.row {
+    display: flex;
+}
