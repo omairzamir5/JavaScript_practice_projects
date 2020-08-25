@@ -11,9 +11,8 @@ function showErrorMsg(input,message) {
     formControl.classList.add('error');
     const error = formControl.querySelector('small');
     error.innerText = message;
-    // console.log(formControl.classList);
     
-};
+}
 
 
 // Function to show Success
@@ -30,7 +29,6 @@ function getFieldName(input){
 
 
 //Funtion to validate Email
-
 function checkValidEmail(input) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
@@ -73,7 +71,7 @@ function checkInput(inputArray){
         }
             
     });
-};
+}
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
