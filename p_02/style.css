@@ -83,10 +83,10 @@ body{
     background-color: rgb(209, 139, 255);
 }
 .seat.selected {
-    background-color: rgb(63, 213, 250);
+    background-color: aqua;
 }
 .seat.occupied {
-    background-color: rgb(47, 194, 194);
+    background-color: rgb(0, 158, 158);
 }
 
 .seat:not(.occupied):hover {
@@ -96,4 +96,8 @@ body{
 
 .row {
     display: flex;
+}
+
+.text span {
+    color: aqua;
 }
