@@ -3,6 +3,9 @@ const seats = document.querySelectorAll('.container .row .seat:not(.occupied)');
 let count = document.getElementById('count');
 let total = document.getElementById('total');
 const movieSelect = document.getElementById('movie-list');
+const movie = document.querySelector('.screen iframe');
+movie.src = "https://www.youtube.com/embed/naW9U8MiUY0";
+console.log(movie);
 let ticketPrice = +movieSelect.value;
 
 populateUI();
@@ -44,7 +47,7 @@ function populateUI() {
 movieSelect.addEventListener('change', (e)=> {
     
     ticketPrice = +e.target.value;
-    setMovieData(e.target.selectedIndex,ticketPrice);
+    setMovieData(e.target.selectedIndex,e.target.value);
     updateSelectedSeats();
 });
 
