@@ -35,6 +35,17 @@ p{
     padding: 10px 20px;
     border: 1px solid var(--secondar-color);
     font-weight: bold;
+    
+}
+.back-button{
+    margin-left: 80%;
+}
+.back-button:active{
+    transform: translateY(4px);
+}
+
+.btn.flip:active {
+    transform: translateY(4px);
 }
 
 .currency {

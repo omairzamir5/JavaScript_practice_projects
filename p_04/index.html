@@ -5,11 +5,15 @@
     <title>Document</title>
 </head>
 <body>
-        <img src="../p_04/images/Finance_loan_money-512.webp" alt="" class="money-image">
+    <div class="back-button">
+        <a href="../index.html" class="btn back-button" style="text-decoration: none;">Back</a>    
+    </div>
+    
+        <img src="../p_04/images/currency_1.webp" alt="" class="money-image">
         <h1>Currency Exchange</h1>
         <p>Please Select you currency, Enter the amount you want to convert and the target currency.</p>
     <div class="container">
-        
+       
         <div class="rate" id="rate"></div>
         <div class="currency">
             <select class="currency-one" id="currency-one">
@@ -84,12 +88,12 @@
                 <option value='UYU'>UYU - Uruguay</option>
                 <option value='ZAR'>ZAR - South Africa</option>
             </select>
-            <input type="number" name="amount-one" id="amount-one" placeholder="1">
+            <input type="number" name="amount-one" id="amount-one" value="1"placeholder="1">
         </div>
         <div class="flip-container">
           
-            <button class="btn btn-default" id="flip">
-                Flip
+            <button class="btn btn-default flip" id="flip">
+               <img src="./images/flip.jpg" width="40px" height="40px" alt="" srcset="">
             </button>
             
         </div>

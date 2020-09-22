@@ -25,6 +25,7 @@ function flip() {
     const temp = select_two.value;
     select_two.value = select_one.value;
     select_one.value = temp;
+    calculate();
 }
 
 ///Event Listeners//////
