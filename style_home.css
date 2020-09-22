@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed&display=swap');
 
+:root {
+    --border_shadow-color : rgb(32, 42, 68);
+}
 * {
     box-sizing: border-box;
 }
@@ -60,8 +63,8 @@ header {
 .box {
     background-color: white;
     margin: 0 20px;
-    box-shadow: 2px 7px 1px whitesmoke;
-    border-radius: 5px;
+    box-shadow: 2px 7px 2px var(--border_shadow-color);
+    border-radius: 3px;
     border: 1px solid white;
     padding-bottom: 10px;
     text-align: center;
