@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: grey;
+    font-family: sans-serif;
+}
+
+h1{
+    color: white;
+}
+
+.screen{
+    cursor: pointer;
+    width: 70%;
+    background-color: black !important;
+}
+
+.controls {
+    width: 70%;
+    background-color: rgb(0,0,0,0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+.btn {
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+.btn-focus {
+    outline: 0;
+}
+
+.fa-play {
+    color: greenyellow;
+}
+
+.fa-stop {
+    color: red;
+}
+
+.fa-pause {
+    color: silver;
+}
