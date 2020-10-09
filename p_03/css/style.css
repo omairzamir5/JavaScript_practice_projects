@@ -38,7 +38,7 @@ h1{
     background: transparent;
 }
 
-.btn-focus {
+.btn:focus {
     outline: 0;
 }
 
@@ -51,5 +51,17 @@ h1{
 }
 
 .fa-pause {
-    color: silver;
+    color: white;
+}
+
+span.timestamp {
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+}
+
+@media(max-width: 800px) {
+    .screen, .controls {
+        width: 90%;
+    }
 }
