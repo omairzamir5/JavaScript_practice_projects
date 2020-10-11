@@ -1,6 +1,6 @@
 :root{
-    --primary-color:#000042;
-    --secondar-color:#ffd334;
+    --primary-color:#c8e1ff;
+    --secondar-color:white;
 }
 body{
     background-color: var(--primary-color);
@@ -8,35 +8,69 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     margin: 0;
-    padding: 20px;
-}
-h1 {
-    color: var(--secondar-color);
-    text-align: center;
-}
-p{
-    color: white;
 }
 
+.container {
 
-.money-image {
-    width: 150px;
+    display: flex;
+    padding: 25px;
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+}
+aside {
+    padding: 10px 20px;
+    width: 250px;
+    border-right: 1px solid black;
 }
 
-.btn{
+button{
     background-color:var(--secondar-color);
-    color: var(--primary-color);
+    color: black;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 14px;
-    padding: 10px 20px;
-    border: 1px solid var(--secondar-color);
+    border: 1px solid black;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    padding: 10px;
     font-weight: bold;
     
 }
+
+main {
+    flex: 1;
+    padding: 10px 20px;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
 .back-button{
     margin-left: 80%;
 }
@@ -44,44 +78,7 @@ p{
     transform: translateY(4px);
 }
 
-.btn.flip:active {
-    transform: translateY(4px);
-}
-
-.currency {
-    padding: 30px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-.currency select {
-    padding: 10px 20px;
-    border: 1px solid lightgrey;
-}
-
-.currency input {
-    border: 0;
-    background: transparent;
-    color: white;
-    font-size: 28px;
-    text-align: right;
-    width: 100px;
-
-}
-
-.flip-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 70px;
-}
-
-.rate{
+h1 {
     color: var(--secondar-color);
-    font-size: 24px;
-    padding: 0 10px;
-}
-select:focus, input:focus, button:focus {
-    outline: 0;
+    text-align: center;
 }
