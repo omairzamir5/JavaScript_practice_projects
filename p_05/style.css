@@ -1,6 +1,6 @@
 :root{
     --primary-color:#c8e1ff;
-    --secondar-color:white;
+    --secondar-color:black;
 }
 body{
     background-color: var(--primary-color);
@@ -27,7 +27,7 @@ aside {
 }
 
 button{
-    background-color:var(--secondar-color);
+    background-color:white;
     color: black;
     cursor: pointer;
     border-radius: 5px;
