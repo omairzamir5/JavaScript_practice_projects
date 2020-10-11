@@ -32,15 +32,31 @@ h1{
     justify-content: center;
     padding: 15px;
 }
-.btn {
-    border: 0;
-    cursor: pointer;
-    background: transparent;
-}
+    .btn {
+        border: 0;
+        cursor: pointer;
+        background: transparent;
+    }
 
-.btn:focus {
-    outline: 0;
-}
+    .btn:focus {
+        outline: 0;
+    }
+
+    .back-button{
+        background-color:white;
+        color: var(--primary-color);
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 14px;
+        padding: 10px 20px;
+        border: 1px solid white;
+        font-weight: bold;
+        margin-top: 20px;
+        
+    }
+    .back-button{
+        margin-left: 80%;
+    }
 
 .fa-play {
     color: greenyellow;
