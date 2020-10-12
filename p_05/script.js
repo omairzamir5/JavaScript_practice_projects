@@ -47,3 +47,39 @@ function updateDOM(inputData = data) {
 function convetToCurrency(number) {
     return (number).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
+
+//FUNCTIONS
+
+// 1 - Function to Add User
+function addUser(params) {
+    
+}
+// 2 - Function to double Worth Amount
+function doubleWorth(params) {
+    
+}
+// 3 - Function to Show Millionaires
+function showMillionaires(params) {
+    
+}
+// 4 - Function to Sort User
+function sortUser(params) {
+    
+}
+// 5 - Function to Calculate Total Amount
+function calculateTotal(params) {
+    
+}
+//EVENT LISTENERS
+
+//1 - Event to Add User
+addUserButton.addEventListener('click',addUser);
+//2 - Event to Double Amount
+doubleButton.addEventListener('click',doubleWorth);
+//3 - Event to Show millionaires
+showMillionairesButton.addEventListener('click',showMillionaires);
+//4 - Event to Sort User
+sortButton.addEventListener('click',sortUser);
+//5 - Event to Calculate Total Amount
+calculateTotalButton.addEventListener('click',calculateTotal);
+
