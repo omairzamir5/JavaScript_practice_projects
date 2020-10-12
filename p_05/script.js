@@ -50,30 +50,45 @@ function convetToCurrency(number) {
 
 //FUNCTIONS
 
-// 1 - Function to Add User
-function addUser(params) {
-    
-}
+
 // 2 - Function to double Worth Amount
-function doubleWorth(params) {
-    
+function doubleWorth() {
+    data = data.map( item => {
+        return {...item, worth:item.worth * 2};
+    });
+    updateDOM(data);
 }
 // 3 - Function to Show Millionaires
-function showMillionaires(params) {
-    
+function showMillionaires() {
+    data = data.filter( item => {
+        return item.worth >= 1000000;
+    });
+
+    updateDOM(data);
 }
 // 4 - Function to Sort User
-function sortUser(params) {
-    
+function sortUser() {
+    data = data.sort( (a,b) =>  {
+        return b.worth - a.worth;
+    });
+
+    updateDOM(data);
 }
 // 5 - Function to Calculate Total Amount
-function calculateTotal(params) {
-    
+function calculateTotal() {
+    totalWorth = data.reduce(
+        (acc,item) => (acc+item.worth),0
+    );
+
+    const totalWorthelement = document.createElement('div');
+    totalWorthelement.innerHTML = ` <h3><strong>Total Net Worth</strong>${convetToCurrency(totalWorth)}</h3>`;
+    main.appendChild(totalWorthelement);
+
 }
 //EVENT LISTENERS
 
 //1 - Event to Add User
-addUserButton.addEventListener('click',addUser);
+addUserButton.addEventListener('click',generateRandomUser);
 //2 - Event to Double Amount
 doubleButton.addEventListener('click',doubleWorth);
 //3 - Event to Show millionaires
