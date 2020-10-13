@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+ 
+    <title>My Layout Page</title>
+</head>
+<body>
+    <h1>Layout Page</h1>
+    <nav>
+        <div class="logo">
+            <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="Random User Image" srcset="">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <header>
+        <button class="toggle" id="toggle">
+            <i class="fa fa-bars fa-2x" aria-hidden="true" ></i>
+        </button>
+        <h1>Landing Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem itaque nam, alias maiores voluptas sint cupiditate rem necessitatibus maxime commodi quibusdam quasi? Nam fugit ab corrupti? Voluptates, accusamus. Id, temporibus?</p>
+        <button class="apply" id="open" >Apply Now</button>
+    </header>
+    <div class="container">
+       <h2>Cloud Native Computing</h2>
+       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quidem praesentium, quae aut deserunt nisi? Non ad tempora, esse dolorum culpa nam molestiae pariatur ullam aperiam aut? Velit, illo odio!</p>
+       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quidem praesentium, quae aut deserunt nisi? Non ad tempora, esse dolorum culpa nam molestiae pariatur ullam aperiam aut? Velit, illo odio!</p>
+
+       <h2>More Information</h2>
+       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quidem praesentium, quae aut deserunt nisi? Non ad tempora, esse dolorum culpa nam molestiae pariatur ullam aperiam aut? Velit, illo odio!</p>
+       
+       <h2>Syllabus</h2>
+       <ul>
+           <li>Project 1</li>
+           <li>Project 2</li>
+           <li>Project 3</li>
+       </ul>
+
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi vel iusto, fugit mollitia eos dicta cumque inventore assumenda quia fugiat cupiditate aspernatur id velit exercitationem aliquid reprehenderit debitis ratione.</p>
+    </div>
+    <div class="model-container" id="model">
+        <div class="model">
+            <button class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="model-header">
+                <h3>Apply</h3>
+            </div>
+            <div class="model-content">
+                <p>To Sign up for classes please submit this form</p>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Full Name" class="form-input">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Email" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Password" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" placeholder="Confirm Password" class="form-input">
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+</body>
+</html>
