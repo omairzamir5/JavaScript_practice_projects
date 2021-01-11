@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Hangman Game</title>
+</head>
+<body>
+
+    <h1>Hangman</h1>
+    <p>Can you guess the hidden word? Please Enter the letter.</p>
+    <div class="game-container">
+        <svg height="250px" width="200px" class="figure-container">
+            <!-- platform -->
+            <line x1="60" y1="20" x2="140" y2="20"/>
+            <line x1="140" y1="20" x2="140" y2="50"/>
+            <line x1="60" y1="20" x2="60" y2="230"/>
+            <line x1="20" y1="230" x2="100" y2="230"/>
+            <!-- hangman head -->
+            <circle cx="140" cy="70" r="20" class="hangman-part"/>
+            <!-- hangman body -->
+            <line x1="140" y1="90" x2="140" y2="160" class="hangman-part"/>
+            <!-- Arms of Hangman -->
+            <line x1="140" y1="110" x2="120" y2="140" class="hangman-part"/>
+            <line x1="140" y1="110" x2="160" y2="140" class="hangman-part"/>
+            <!-- Legs of Hangman -->
+            <line x1="140" y1="160" x2="120" y2="190" class="hangman-part"/>
+            <line x1="140" y1="160" x2="160" y2="190" class="hangman-part"/>
+        </svg>
+        
+        <div class="wrong-letters" id="wrong-letters"></div>
+        <div class="word" id="word"></div>
+    </div>
+
+   
+    <!-- Container for Popups -->
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <h2 id="win-lose">You Win!</h2>
+            <button id="restart">
+                Restart Game
+            </button>
+        </div>
+    </div>
+    <!-- Container for Sliding Notification -->
+    <div class="slider-container" id="slider-container">
+        <p>You Have Already Enter This Letter</p>
+    </div>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
